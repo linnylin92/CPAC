@@ -1,0 +1,2 @@
+#this line should go to the destination and print out all the sub-folders in that destination
+sh markexample1.sh /tigress/HANLIU/mridata/CPAC_rawdata/INDI/Retrospective/COBRE
