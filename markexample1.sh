@@ -1,7 +1,11 @@
 #! /bin/sh
 
 cd "$1"
-echo $PWD
+files=`ls `
 
-files=`ls -d */`
-echo $files
+for subject in $files
+do
+    echo $subject  
+done
+
+
