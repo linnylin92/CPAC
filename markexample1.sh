@@ -1,6 +1,7 @@
-#initial comment
-echo "First argument $1"
+#! /bin/sh
 
 cd "$1"
-
 echo $PWD
+
+files=`ls -d */`
+echo $files
