@@ -1,0 +1,27 @@
+Site,"TR (seconds)",Reference,Acquisition,first_tr,last_tr
+Adelstein,2,17,alt+z,None,None
+ClevelandCCF,2.8,15,alt+z,None,None
+COBRE,2,16,alt+z,None,None
+CoRR_BMB1,2.3,17,alt+z2,None,None
+CoRR_BNU1,2,16,alt+z,None,None
+CoRR_BNU3,2,17,alt+z2,None,None
+CoRR_DC1,2.5,18,alt+z2,None,None
+CoRR_HNU1,2,22,alt+z,None,None
+CoRR_IACAS1,2,16,alt+z2,None,None
+CoRR_IPCAS1,2,16,alt+z2,None,None
+CoRR_IPCAS2,2.5,16,alt+z2,None,None
+CoRR_IPCAS3,2,32,alt+z2,None,None
+CoRR_IPCAS4,2,16,alt+z,None,None
+CoRR_LMU1,2.5,26,alt+z2,None,None
+CoRR_LMU2,3,14,alt+z2,None,None
+CoRR_LMU3,3,18,alt+z2,None,None
+CoRR_MRN,2,16,alt+z,None,None
+CoRR_NYU1,2,16,alt+z,None,None
+CoRR_NYU2,2,16,alt+z,None,None
+CoRR_UPSM1,1.5,14,alt+z,None,None
+CoRR_Utah1,2,20,alt+z2,None,None
+CoRR_Utah2,2,20,alt+z2,None,None
+CoRR_XHCUMS,3,22,alt+z,None,None
+NYU_Cocaine,2,17,alt+z,None,None
+Power,2.5,16,alt+z2,None,None
+Quiron-Valencia,,18,alt+z2,None,None
