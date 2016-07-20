@@ -1,6 +1,6 @@
 anatomicalTemplate:  /tigress/HANLIU/mridata/CPAC_rawdata/INDI/Retrospective/%s/%s/anat/mprage_1.nii.gz
 
-functionalTemplate:  /tigress/HANLIU/mridata/CPAC_rawdata/INDI/Retrospective/%s/%s/func/rest_*.nii.gz
+functionalTemplate:  /tigress/HANLIU/mridata/CPAC_rawdata/INDI/Retrospective/%s/%s/func/rest_1.nii.gz
 
 subjectList:  ["50002"]
 
