@@ -1,6 +1,6 @@
-anatomicalTemplate:  /tigress/HANLIU/mridata/CPAC_rawdata/INDI/Retrospective/ABIDE/%s/%s/anat/mprage_1.nii.gz
+anatomicalTemplate:  /tigress/HANLIU/mridata/CPAC_rawdata/INDI/Retrospective/%s/%s/anat/mprage_1.nii.gz
 
-functionalTemplate:  /tigress/HANLIU/mridata/CPAC_rawdata/INDI/Retrospective/ABIDE/%s/%s/func/rest_*.nii.gz
+functionalTemplate:  /tigress/HANLIU/mridata/CPAC_rawdata/INDI/Retrospective/%s/%s/func/rest_*.nii.gz
 
 subjectList:  ["50002"]
 
@@ -25,11 +25,11 @@ pipelineName:  'CPAC_2016-01-22'
 removeWorkingDir: False
 
 runRegistrationPreprocessing : [1]
-resolution_for_anat : 2mm
+resolution_for_anat : 3mm
 template_brain_only_for_anat : /tigress/HANLIU/mridata/CPAC_image_resource/FSL_data/MNI152_T1_${resolution_for_anat}_brain.nii.gz
 template_skull_for_anat : /tigress/HANLIU/mridata/CPAC_image_resource/FSL_data/MNI152_T1_${resolution_for_anat}.nii.gz
 regOption : ['ANTS']
-fnirtConfig : T1_2_MNI152_2mm
+fnirtConfig : T1_2_MNI152_3mm
 ref_mask : /tigress/HANLIU/mridata/CPAC_image_resource/FSL_data/MNI152_T1_${resolution_for_anat}_brain_mask_dil.nii.gz
 regWithSkull : [0]
 
@@ -65,7 +65,7 @@ func_reg_input :  ['Mean Functional']
 func_reg_input_volume :  0
 
 runRegisterFuncToMNI : [1]
-resolution_for_func : 2mm
+resolution_for_func : 3mm
 identityMatrix : /tigress/HANLIU/mridata/local/fsl-5.0.8/fsl/etc/flirtsch/ident.mat
 
 runFristonModel : [1]
@@ -77,7 +77,7 @@ numRemovePrecedingFrames : 1
 numRemoveSubsequentFrames : 2
 
 runNuisance : [1]
-lateral_ventricles_mask : /tigress/HANLIU/mridata/CPAC_image_resource/HarvardOxford-lateral-ventricles-thr25-2mm.nii.gz
+lateral_ventricles_mask : /tigress/HANLIU/mridata/CPAC_image_resource/HarvardOxford-lateral-ventricles-thr25-3mm.nii.gz
 Corrections :
     - compcor : 1
       wm : 0
