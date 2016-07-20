@@ -10,7 +10,7 @@ exclusionSubjectList:  None
 
 siteList:  [Pitt]
 
-scanParametersCSV:  scan_parameters_abide.csv
+scanParametersCSV:  scan_parameters.csv
 
 outputSubjectListLocation:  /tigress/HANLIU/mridata/CPAC/subjectlistoutput/
 
