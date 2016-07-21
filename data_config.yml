@@ -10,13 +10,13 @@ exclusionSubjectList:  None
 
 siteList:  [Pitt]
 
-scanParametersCSV:  scan_parameters.csv
+scanParametersCSV:  scan_parameters_INDI.csv
 
 outputSubjectListLocation:  /tigress/HANLIU/mridata/CPAC/subjectlistoutput/
 
-workingDirectory: /tigress/HANLIU/mridata/CPAC_processed/tmp_preprocess/
+workingDirectory: /tigress/HANLIU/mridata/CPAC_processed/tmp_preprocess_INDI/
 
-outputDirectory: /tigress/HANLIU/mridata/CPAC_processed/tmp_finished/
+outputDirectory: /tigress/HANLIU/mridata/CPAC_processed/tmp_finished_INDI/
 
 crashLogDirectory: /tigress/HANLIU/mridata/CPAC/crashLog/
 
@@ -26,21 +26,21 @@ removeWorkingDir: False
 
 runRegistrationPreprocessing : [1]
 resolution_for_anat : 3mm
-template_brain_only_for_anat : /tigress/HANLIU/mridata/CPAC_image_resource/FSL_data/MNI152_T1_${resolution_for_anat}_brain.nii.gz
-template_skull_for_anat : /tigress/HANLIU/mridata/CPAC_image_resource/FSL_data/MNI152_T1_${resolution_for_anat}.nii.gz
+template_brain_only_for_anat : /tigress/HANLIU/mridata/CPAC_image_resource/MNI_3mm/MNI152_T1_${resolution_for_anat}_brain.nii.gz
+template_skull_for_anat : /tigress/HANLIU/mridata/CPAC_image_resource/MNI_3mm/MNI152_T1_${resolution_for_anat}.nii.gz
 regOption : ['ANTS']
 fnirtConfig : T1_2_MNI152_3mm
-ref_mask : /tigress/HANLIU/mridata/CPAC_image_resource/FSL_data/MNI152_T1_${resolution_for_anat}_brain_mask_dil.nii.gz
+ref_mask : /tigress/HANLIU/mridata/CPAC_image_resource/MNI_3mm/MNI152_T1_${resolution_for_anat}_brain_mask_dil.nii.gz
 regWithSkull : [0]
 
-template_symmetric_brain_only : /tigress/HANLIU/mridata/CPAC_image_resource/FSL_data/MNI152_T1_${resolution_for_anat}_brain.nii.gz
-template_symmetric_skull : /tigress/HANLIU/mridata/CPAC_image_resource/FSL_data/MNI152_T1_${resolution_for_anat}.nii.gz
-dilated_symmetric_brain_mask : /tigress/HANLIU/mridata/CPAC_image_resource/FSL_data/MNI152_T1_${resolution_for_anat}_brain_mask_dil.nii.gz
+template_symmetric_brain_only : /tigress/HANLIU/mridata/CPAC_image_resource/MNI_3mm/MNI152_T1_${resolution_for_anat}_brain.nii.gz
+template_symmetric_skull : /tigress/HANLIU/mridata/CPAC_image_resource/MNI_3mm/MNI152_T1_${resolution_for_anat}.nii.gz
+dilated_symmetric_brain_mask : /tigress/HANLIU/mridata/CPAC_image_resource/MNI_3mm/MNI152_T1_${resolution_for_anat}_brain_mask_dil.nii.gz
 
 functionalMasking : ['3dAutoMask']
 
-template_brain_only_for_func : /tigress/HANLIU/mridata/CPAC_image_resource/FSL_data/MNI152_T1_${resolution_for_anat}_brain.nii.gz
-template_skull_for_func : /tigress/HANLIU/mridata/CPAC_image_resource/FSL_data/MNI152_T1_${resolution_for_anat}.nii.gz
+template_brain_only_for_func : /tigress/HANLIU/mridata/CPAC_image_resource/MNI_3mm/MNI152_T1_${resolution_for_anat}_brain.nii.gz
+template_skull_for_func : /tigress/HANLIU/mridata/CPAC_image_resource/MNI_3mm/MNI152_T1_${resolution_for_anat}.nii.gz
 
 
 runSegmentationPreprocessing : [1]
@@ -77,7 +77,7 @@ numRemovePrecedingFrames : 1
 numRemoveSubsequentFrames : 2
 
 runNuisance : [1]
-lateral_ventricles_mask : /tigress/HANLIU/mridata/CPAC_image_resource/HarvardOxford-lateral-ventricles-thr25-3mm.nii.gz
+lateral_ventricles_mask : /tigress/HANLIU/mridata/CPAC_image_resource/HarvardOxford-lateral-ventricles-thr25-2mm.nii.gz
 Corrections :
     - compcor : 1
       wm : 0

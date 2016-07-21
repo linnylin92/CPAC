@@ -4,6 +4,9 @@ cd "$1"
 files=`ls `
 
 mkdir /home/maksen/data_config/
+
+
+
 for subject in $files
 do
     echo $subject  
