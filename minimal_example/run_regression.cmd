@@ -4,5 +4,6 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH -t 6:00:00
 # Execute commands
-R CMD BATCH "--args $arg1 $arg2 $arg3" 'run_scenario1.R'
+
+R CMD BATCH "--args $arg1" 'run_regression.R'
 
