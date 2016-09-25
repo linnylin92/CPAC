@@ -1,4 +1,6 @@
 This is a minimal example of something that works when submitted to the queue.
 
 Run:
-sh submitscenario1.sh
+sh submit.sh
+
+The results are put int results/.
