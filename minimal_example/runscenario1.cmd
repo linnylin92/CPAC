@@ -4,9 +4,5 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH -t 6:00:00
 # Execute commands
-R CMD BATCH "--args $arg1 $arg2 $arg3" '/tigress/HANLIU/mridata/test_dir/run_scenario1.R'
-
-# arg1 = n arg2 = p arg3 = q arg4 = iter
-
-
+R CMD BATCH "--args $arg1 $arg2 $arg3" 'run_scenario1.R'
 

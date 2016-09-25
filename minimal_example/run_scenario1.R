@@ -12,4 +12,4 @@ seed <- as.numeric(args[[3]])
 lambdas <- seq(0.001,2.5,by=0.015)*sqrt(log(p)/n)
 res <- onebitsim(n,p,lambdas,seed)
 
-save(res,file=paste("/tigress/HANLIU/mridata/test_dir/scenario1/n",n,"p",p,"seed",seed,".RData",sep=""))
+save(res,file=paste("scenario1/n",n,"p",p,"seed",seed,".RData",sep=""))
