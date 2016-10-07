@@ -4,7 +4,14 @@ location=`pwd`
 
 cd "$1"
 files=`ls `     
-
+if [ -z "$1" ]
+    then
+      echo "First argument (file path to directory with only subjects) not supplied"
+fi
+if [ -z "$2" ]
+    then
+      echo "Second argument (argument 1 or 2 for createSubjectList or runCPAC) not supplied"
+fi
 for subject in $files
 
 do
