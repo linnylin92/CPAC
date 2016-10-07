@@ -3,8 +3,7 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH -t 6:00:00
-#SBATCH --mem 40000
+<<<<<<< HEAD
 # Execute commands
 
-
-LD_LIBRARY_PATH=/tigress/HANLIU/mridata/lib64 PYTHONPATH=$PYTHONPATH:/tigressdata/HANLIU/mridata/CPAC /usr/bin/python2.7 cpac_run.py data_config_INDI/data_config_$arg1.yml subjectlistoutput/CPAC_subject_list_$arg1.yml 
+LD_LIBRARY_PATH=/tigress/HANLIU/mridata/lib64 PYTHONPATH=$PYTHONPATH:/tigressdata/HANLIU/mridata/CPAC /usr/bin/python2.7 /tigress/HANLIU/mridata/CPAC/cpac_run.py /tigress/HANLIU/mridata/CPAC/data_config_INDI/data_config_$arg1.yml /tigress/HANLIU/mridata/CPAC/subjectlistoutput/CPAC_subject_list_$arg1.yml
