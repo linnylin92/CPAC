@@ -15,7 +15,7 @@ if [ -z "$2" ]
       echo "Second argument (argument 1 or 2 for createSubjectList or runCPAC) not supplied"
 fi
 
-for subject in $files
+for subject in 025-0040000 025-0040001
 do
     if [ "$2" = "1" ]
     then
