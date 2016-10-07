@@ -19,9 +19,9 @@ for subject in $files
 do
     if [ "$2" = "1" ]
     then
-	sbatch --export arg1=$subject $location/runCreateSubjectList.cmd
+	sbatch --export arg1=$subject -o /tigress/HANLIU/mridata/CPAC_logs/slurm.%N.%j.out -e /tigress/HANLIU/mridata/CPAC_logs/slurm.%N.%j.out $location/runCreateSubjectList.cmd
     else 
-	sbatch --export arg1=$subject $location/runCPAC.cmd
+	sbatch --export arg1=$subject -o /tigress/HANLIU/mridata/CPAC_logs/slurm.%N.%j.out -e /tigress/HANLIU/mridata/CPAC_logs/slurm.%N.%j.out $location/runCPAC.cmd
     fi 
 done
 
