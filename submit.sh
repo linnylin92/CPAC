@@ -3,9 +3,11 @@
 location=`pwd`
 
 cd "$1"
+rm *.out
+rm *.log
 files=`ls `     
 
-for subject in $files
+for subject in 025-0040000 025-0040001 025-0040002 025-0040003
 
 do
     if [ "$2" = "1" ]
