@@ -3,6 +3,8 @@
 location=`pwd`
 
 cd "$1"
+rm *.out
+rm *.log
 files=`ls `     
 if [ -z "$1" ]
     then
@@ -12,8 +14,8 @@ if [ -z "$2" ]
     then
       echo "Second argument (argument 1 or 2 for createSubjectList or runCPAC) not supplied"
 fi
-for subject in $files
 
+for subject in $files
 do
     if [ "$2" = "1" ]
     then
