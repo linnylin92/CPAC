@@ -1,6 +1,8 @@
 This is a minimal example of something that works when submitted to the queue.
+(You need to make the foler 'results' in this folder.)
 
 Run:
+mkdir results 
 sh submit.sh
 
 The results are put int results/.
