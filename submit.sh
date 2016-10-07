@@ -3,7 +3,7 @@
 cd "$1"
 files=`ls `     
 
-for subject in 025-0040000 025-0040001
+for subject in $files
 
 do
     if [ "$2" = "1" ]
