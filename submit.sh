@@ -31,6 +31,8 @@ done
 if [ "$2" = "1" ]
 then
     chmod g+w /tigress/HANLIU/mridata/CPAC/subjectlistoutput -R -f
+    cd "$1"
+    rm extract_data_logs.log
 else
     chmod g+w /tigress/HANLIU/mridata/CPAC_processed/tmp_finished_INDI -R -f
 fi
