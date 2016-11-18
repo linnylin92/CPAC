@@ -21,8 +21,10 @@ for subject in 025-0040000 025-0040001 025-0040002 025-0040010
 do
     if [ "$2" = "1" ]
     then
+        cd /tigress/HANLIU/mridata/CPAC_logs/
 	sbatch --export arg1=$subject -o /tigress/HANLIU/mridata/CPAC_logs/slurm.%N.%j.out -e /tigress/HANLIU/mridata/CPAC_logs/slurm.%N.%j.out $location/runCreateSubjectList.cmd
     else 
+        cd /tigress/HANLIU/mridata/CPAC_logs/
 	sbatch --export arg1=$subject -o /tigress/HANLIU/mridata/CPAC_logs/slurm.%N.%j.out -e /tigress/HANLIU/mridata/CPAC_logs/slurm.%N.%j.out $location/runCPAC.cmd
     fi 
 done
