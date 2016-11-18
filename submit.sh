@@ -17,7 +17,7 @@ if [ -z "$2" ]
 fi
 
 #run commands
-for subject in 025-0040000 025-0040001 025-0040002 025-0040010
+for subject in $files
 
 do
     if [ "$2" = "1" ]
