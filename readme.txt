@@ -1,3 +1,8 @@
+#running the CPAC preprocessing pipeline
+
+sh submit.sh /tigress/HANLIU/mridata/CPAC_rawdata/INDI/Retrospective/COBRE/ 1
+sh submit.sh /tigress/HANLIU/mridata/CPAC_rawdata/INDI/Retrospective/COBRE/ 2
+
 #preprocessing files
 
 1. submit.sh
