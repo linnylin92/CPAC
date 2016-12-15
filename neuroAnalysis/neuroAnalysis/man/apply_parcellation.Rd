@@ -4,12 +4,14 @@
 \alias{apply_parcellation}
 \title{Apply parcellation}
 \usage{
-apply_parcellation(arr, parcel_arr)
+apply_parcellation(arr, parcel_arr, verbose = T)
 }
 \arguments{
 \item{arr}{functional data of subject}
 
 \item{parcel_arr}{parcellation}
+
+\item{verbose}{boolean on if stars should be printed for progress}
 }
 \value{
 a matrix with number of rows equal to number of time slices and number
