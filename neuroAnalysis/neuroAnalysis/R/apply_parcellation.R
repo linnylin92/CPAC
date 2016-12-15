@@ -10,7 +10,7 @@ apply_parcellation <- function(arr, parcel_arr){
   stopifnot(all(dim(arr)[1:3] == dim(parcel_arr)))
   stopifnot(length(dim(arr)) == 4)
 
-  idx <- sort(unique(parcel_arr)); idx <- idx[idx != 0]
+  idx <- sort(unique(as.numeric(parcel_arr))); idx <- idx[idx != 0]
   mat <- matrix(0, dim(arr)[4], length(idx))
 
   for(i in 1:length(idx)){
