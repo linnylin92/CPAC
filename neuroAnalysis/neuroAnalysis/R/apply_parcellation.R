@@ -1,3 +1,11 @@
+#' Apply parcellation
+#'
+#' @param arr functional data of subject
+#' @param parcel_arr parcellation
+#'
+#' @return a matrix with number of rows equal to number of time slices and number
+#' or columns equal to number of parcellations
+#' @export
 apply_parcellation <- function(arr, parcel_arr){
   stopifnot(all(dim(arr)[1:3] == dim(parcel_arr)))
   stopifnot(length(dim(arr)) == 4)
