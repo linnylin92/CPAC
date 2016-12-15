@@ -7,9 +7,9 @@
 #' @return Graph encoded as sparse matrix
 #' @export
 estimate_graph <- function(mat, heuristic = graph_heuristic_percentage, ...){
-  res <- huge::huge(mat)
+  res <- huge::huge(mat, verbose = F)
 
-  idx <- heuristic(res$path, ...)
+  idx <- heuristic(res$sparsity, ...)
   res$path[[idx]]
 }
 
@@ -20,10 +20,6 @@ estimate_graph <- function(mat, heuristic = graph_heuristic_percentage, ...){
 #'
 #' @return Index of the mat_list
 #' @export
-graph_heuristic_percentage <- function(mat_list, percentage = 0.4){
-  sparsity_vec <- sapply(mat_list, function(x){
-    round(sum(x)/2)
-  })
-
-  which.min(abs(sparsity_vec[-1] - percentage))+1
+graph_heuristic_percentage <- function(vec, percentage = 0.1){
+  which.min(abs(vec[-1] - percentage))+1
 }
