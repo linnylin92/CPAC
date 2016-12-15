@@ -2,3 +2,4 @@
 *.Rout
 *.RData
 *.swp
+.Rproj.user
