@@ -20,10 +20,10 @@ estimate_graph <- function(mat, heuristic = graph_heuristic_percentage, ...){
 #'
 #' @return Index of the mat_list
 #' @export
-graph_heuristic_percentage <- function(mat_list, percentage = 0.2){
-  sparsity_vec <- lapply(mat_list, function(x){
+graph_heuristic_percentage <- function(mat_list, percentage = 0.4){
+  sparsity_vec <- sapply(mat_list, function(x){
     round(sum(x)/2)
   })
 
-  which.min(abs(sparsity_vec - percentage))
+  which.min(abs(sparsity_vec[-1] - percentage))+1
 }
