@@ -15,7 +15,7 @@ estimate_graph <- function(mat, heuristic = graph_heuristic_percentage, ...){
 
 #' Graph Heurisitic
 #'
-#' @param mat_list List of graphs encoded as sparse matrices
+#' @param vec vector of sparsity values
 #' @param percentage Target sparsity percentage
 #'
 #' @return Index of the mat_list

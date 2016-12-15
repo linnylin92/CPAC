@@ -4,10 +4,10 @@
 \alias{graph_heuristic_percentage}
 \title{Graph Heurisitic}
 \usage{
-graph_heuristic_percentage(mat_list, percentage = 0.4)
+graph_heuristic_percentage(vec, percentage = 0.1)
 }
 \arguments{
-\item{mat_list}{List of graphs encoded as sparse matrices}
+\item{vec}{vector of sparsity values}
 
 \item{percentage}{Target sparsity percentage}
 }

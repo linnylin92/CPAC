@@ -1,25 +1,32 @@
-#' Title
+#' Median graph
 #'
-#' @param mat_list
-#' @param heuristic
-#' @param ...
+#' @param mat_list list of graphs encoded as sparse matrices
+#' @param heuristic heuristic to choose rank of value for median graph
+#' @param ... additional parameters for median graph
 #'
-#' @return
+#' @return a graph encoded as sparse matrix
 #' @export
-#'
-#' @examples
 median_graph <- function(mat_list, heuristic = median_heuristic, ...){
   sum_mat <- Reduce('+', mat_list)
 
   val <- heuristic(sum_mat, ...)
-  idx <- which(sum_mat[upper.tri(sum_mat)] >= val)
+  idx <- which(as.matrix(sum_mat) >= val, arr.ind = T)
 
   median_graph <- matrix(0, ncol(mat_list[[1]]), nrow(mat_list[[1]]))
-  median_graph[idx] <- 2
+  median_graph[idx] <- 1
 
-  (median_graph + t(median_graph))/2
+  Matrix::Matrix(median_graph, sparse = T)
 }
 
-median_heuristic <- function(sum_mat, percentage = 0.8){
-  quantile(sum_mat[upper.tri(sum_mat)], probs = percentage)
+#' Median heuristic
+#'
+#' @param sum_mat The matrix that with values equal to number of instances per edge
+#' @param percentage threshold for how large the quantile is
+#'
+#' @return a value of number of instances to threshold below
+#' @export
+median_heuristic <- function(sum_mat, percentage = 0.9){
+  val <- as.matrix(sum_mat)[upper.tri(sum_mat)]
+  val <- val[val != 0]
+  stats::quantile(val, probs = percentage)
 }

@@ -3,3 +3,5 @@
 export(apply_parcellation)
 export(estimate_graph)
 export(graph_heuristic_percentage)
+export(median_graph)
+export(median_heuristic)
