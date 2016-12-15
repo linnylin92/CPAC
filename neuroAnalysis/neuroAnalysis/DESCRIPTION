@@ -10,7 +10,8 @@ Encoding: UTF-8
 LazyData: true
 Imports:
     oro.nifti,
-    huge
+    huge,
+    Matrix
 Suggests:
     testthat
 RoxygenNote: 5.0.1

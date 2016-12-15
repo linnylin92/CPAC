@@ -6,12 +6,7 @@
 \title{Automated Anatomical Labeling in 3mm}
 \format{A BrcParcellation object of size 61 x 73 x 61 voxels, of which
 there are 47,636 voxels in representing the brain (17.5%). The parcellation is
-not symmetric.
-\describe{
-  \item{dim3d}{A 3-element vector for the 3D dimensions}
-  \item{partition}{A vector of length prod(dim3d) having values 0,...,n
-  where n is the total number of parcellations}
-}}
+not symmetric.}
 \source{
 TO BE FILLED
 }
