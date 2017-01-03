@@ -32,3 +32,17 @@ convert_data <- function(mat_list){
 
 case_dat <- convert_data(case_dat)
 control_dat <- convert_data(control_dat)
+
+###### STEP 2: estimate the graph #########
+
+case_graph_list <- lapply(case_dat, neuroAnalysis::estimate_graph)
+control_graph_list <- lapply(control_dat, neuroAnalysis::estimate_graph)
+
+###### STEP 3: compute median graph ##########
+
+case_median <- neuroAnalysis::median_graph(case_graph_list)
+control_median <- neuroAnalysis::median_graph(control_graph_list)
+
+###### STEP 4: compute the difference #########
+
+neuroAnalysis::graph_difference(control_median, case_median)
