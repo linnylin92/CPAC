@@ -1,5 +1,4 @@
 ###### STEP 0: read in data ########
-setwd("C:/Mark/College/Senior Year/PACM certificate")
 source("parcellation.R")
 library(oro.nifti)
 case_subj <- c("025-0040046", "025-0040002", "025-0040017")
