@@ -19,7 +19,7 @@ control_dat <- read_subj(control_subj)
 
 ###### STEP 1: apply the parcellation #######
 
-parcel <- readNIfTI("tigress/HANLIU/mridata/CPAC_image_resource/AAL/AAL_3mm_90parcel.nii.gz")
+parcel <- readNIfTI("/tigress/HANLIU/mridata/CPAC_image_resource/AAL/AAL_3mm_90parcel.nii.gz")
 parcel <- parcel@.Data
 
 convert_data <- function(mat_list){
