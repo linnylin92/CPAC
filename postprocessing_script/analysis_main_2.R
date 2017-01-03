@@ -19,7 +19,7 @@ control_dat <- read_subj(control_subj)
 
 ###### STEP 1: apply the parcellation #######
 
-parcel <- readNIfTI("/tigress/HANLIU/mridata/CPAC_image_resource/AAL/AAL_3mm_90parcel.nii.gz")
+parcel <- oro.nifti::readNIfTI("/tigress/HANLIU/mridata/CPAC_image_resource/AAL/AAL_3mm_90parcel.nii.gz")
 parcel <- parcel@.Data
 
 convert_data <- function(mat_list){
@@ -43,5 +43,4 @@ case_median <- median_graph(case_graph_list)
 control_median <- median_graph(control_graph_list)
 
 ###### STEP 4: compute the difference #########
-
-neuroAnalysis::graph_difference(control_median, case_median)
+graph_difference(control_median, case_median)
