@@ -1,5 +1,8 @@
 ###### STEP 0: read in data ########
 source("parcellation.R")
+source("estimate_graph.R")
+source("graph_difference.R")
+source("median_graph.R")
 library(oro.nifti)
 case_subj <- c("025-0040046", "025-0040002", "025-0040017")
 control_subj <- c("025-0040061", "025-0040090", "025-0040113")
