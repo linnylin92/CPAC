@@ -43,7 +43,9 @@ control_graph_list <- lapply(control_dat, estimate_graph)
 ###### STEP 3: compute median graph ##########
 
 case_median <- median_graph(case_graph_list)
+case_median = as.matrix(case_median)
 control_median <- median_graph(control_graph_list)
+control_median = as.matrix(control_median)
 
 ###### STEP 4: compute the difference #########
 graph_difference(control_median, case_median)
