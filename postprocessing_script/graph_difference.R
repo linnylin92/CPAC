@@ -15,7 +15,6 @@ graph_difference <- function(mat1, mat2){
 
   x = list(percentage_diff = perc_diff, list1 = .prune_idx(idx_pos),
        list2 = .prune_idx(idx_neg))
-	write.table(as.data.frame(x),file="/home/maksen/CPAC_script.git/postprocessing_script/graphresult.csv", quote=F,sep=",",row.names=F)
 }
 
 .prune_idx <- function(mat){
