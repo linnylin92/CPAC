@@ -5,4 +5,4 @@
 #SBATCH -t 6:00:00
 # Execute commands
 
-R CMD BATCH "--args $arg1 $arg2 $arg3" 'estimate_subjgraph.R'
+Rscript --vanilla estimate_subjgraph.R $arg1 $arg2 $arg3
