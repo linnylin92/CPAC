@@ -11,9 +11,14 @@ if [ -z "$1" ]
       exit
 fi
 
+if [ -z "$2" ]
+    then
+      echo "ERROR: Second argument (file path to output directory) not supplied"
+      exit
+fi
+
 #run commands
 for subject in $files
-
 do
     mkdir "$2"/"$subject"
     cd /tigress/HANLIU/mridata/CPAC_logs/

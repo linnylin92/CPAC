@@ -1,5 +1,4 @@
 parcellation <- function(dat, parcel) {
-  library(oro.nifti)
   idx <- sort(unique(as.numeric(parcel))); idx <- idx[idx != 0]
   timeseries <- matrix(0, dim(dat)[4], length(idx))
   
