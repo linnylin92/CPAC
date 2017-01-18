@@ -3,12 +3,12 @@
 library(oro.nifti)
 library(huge)
 
-source("apply_parcellation.R")
-source("estimate_graph.R")
-
-###### STEP 0: read in data ########
 args <- commandArgs(trailingOnly=TRUE)
 
+source(paste0(args[4], "/apply_parcellation.R"))
+source(paste0(args[4], "/estimate_graph.R"))
+
+###### STEP 0: read in data ########
 print(paste0(args[2], args[1], "func.nii.gz"))
 dat <- oro.nifti::readNIfTI(paste0(args[2], args[1], "/func.nii.gz"), reorient = F)@.Data
 

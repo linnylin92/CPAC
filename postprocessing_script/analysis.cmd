@@ -5,4 +5,4 @@
 #SBATCH -t 6:00:00
 # Execute commands
 
-Rscript --vanilla estimate_subjgraph.R $arg1 $arg2 $arg3
+Rscript --vanilla $arg4/estimate_subjgraph.R $arg1 $arg2 $arg3 $arg4
