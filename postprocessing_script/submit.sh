@@ -20,9 +20,9 @@ fi
 #run commands
 for subject in $files
 do
-    mkdir "$2"/"$subject"
+    mkdir -p "$2"/"$subject"
     cd /tigress/HANLIU/mridata/CPAC_logs/
-    sbatch --export arg1=$subject --export arg2=$1 --export arg3=$2 --export arg4=$location -o /tigress/HANLIU/mridata/CPAC_logs/slurm.%N.%j.out -e /tigress/HANLIU/mridata/CPAC_logs/slurm.%N.%j.out $location/analysis.cmd
+    sbatch --export arg1=$subject,arg2=$1,arg3=$2,arg4=$location -o /tigress/HANLIU/mridata/CPAC_logs/slurm.%N.%j.out -e /tigress/HANLIU/mridata/CPAC_logs/slurm.%N.%j.out $location/analysis.cmd
 done
 
 #set file permissions correctly
