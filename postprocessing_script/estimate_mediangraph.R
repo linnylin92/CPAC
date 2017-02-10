@@ -5,6 +5,8 @@
 args <- commandArgs(trailingOnly=TRUE)
 
 library(Matrix)
+source("median_graph.R")
+source("graph_difference.R")
 
 MyData <- read.csv(file=args[2], header=TRUE, sep=",")
 colnames(MyData)[5]<-"labels"
