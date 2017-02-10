@@ -28,13 +28,13 @@ case_graph_list = vector("list", length(case_subj))
 control_graph_list = vector("list", length(control_subj))
 
 for (idx in 1:length(case_subj)) {
-    load(paste0(args[1],"025-00", case_subj[idx], "/graph.RData"))
-	case_graph_list[[idx]]= res;
+  load(paste0(args[1],"025-00", case_subj[idx], "/graph.RData"))
+  case_graph_list[[idx]] <- as.matrix(res)
 }
 
 for (idx in 1:length(control_subj)) {
-	load(paste0(args[1],"025-00", control_subj[idx], "/graph.RData"));
-	control_graph_list[[idx]]= res;
+  load(paste0(args[1],"025-00", control_subj[idx], "/graph.RData"))
+  control_graph_list[[idx]] <- as.matrix(res)
 }
 
 ###### STEP 4: compute median graph ##########
@@ -44,5 +44,5 @@ control_median <- median_graph(control_graph_list)
 
 ###### STEP 5: compute the difference #########
 
-graph_difference(control_median, case_median)
-save(graph_difference, file=paste0(args[3], "/graph.RData"))
+res <- graph_difference(control_median, case_median)
+save(res, file=paste0(args[3], "/graph.RData"))
