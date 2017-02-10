@@ -4,23 +4,35 @@
 
 args <- commandArgs(trailingOnly=TRUE)
 
+library(Matrix)
+
 MyData <- read.csv(file=args[2], header=TRUE, sep=",")
 colnames(MyData)[5]<-"labels"
 case_subj = MyData[,1][which(MyData$labels == "Patient")]
 control_subj = MyData[,1][which(MyData$labels == "Control")]
 
+# remove subjects not found
+current_files <- list.files(args[1])
+loc <- sapply(case_subj, function(x){length(grep(x, current_files))})
+case_subj <- case_subj[loc != 0]
+
+loc <- sapply(control_subj, function(x){length(grep(x, current_files))})
+control_subj <- control_subj[loc != 0]
+
+
 ###### STEP 2: read in all the graphs for each of the subjects
 
-case_graph_list = list()
-control_graph_list = list()
-for (subject in case_subj) {
-    load(paste(args[1],"025-", subject, "/graph.RData"));
-	case_graph_list[length(case_graph_list)+1]= res;
+case_graph_list = vector("list", length(case_subj))
+control_graph_list = vector("list", length(control_subj))
+
+for (idx in 1:length(case_subj)) {
+    load(paste0(args[1],"025-00", case_subj[idx], "/graph.RData"))
+	case_graph_list[[idx]]= res;
 }
 
-for (subject in control_subj) {
-	load(paste(args[1],"025-", subject, "/graph.RData"));
-	control_graph_list[length(control_graph_list)+1]= res;
+for (idx in 1:length(control_subj)) {
+	load(paste0(args[1],"025-00", control_subj[idx], "/graph.RData"));
+	control_graph_list[[idx]]= res;
 }
 
 ###### STEP 4: compute median graph ##########
