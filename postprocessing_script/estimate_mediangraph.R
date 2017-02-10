@@ -14,12 +14,12 @@ control_subj = MyData[,1][which(MyData$labels == "Control")]
 case_graph_list = list()
 control_graph_list = list()
 for (subject in case_subj) {
-	load(paste(args[1],"025-", subject, "/graph.RData");
+    load(paste(args[1],"025-", subject, "/graph.RData"));
 	case_graph_list[length(case_graph_list)+1]= res;
 }
 
 for (subject in control_subj) {
-	load(paste(args[1],"025-", subject, "/graph.RData");
+	load(paste(args[1],"025-", subject, "/graph.RData"));
 	control_graph_list[length(control_graph_list)+1]= res;
 }
 

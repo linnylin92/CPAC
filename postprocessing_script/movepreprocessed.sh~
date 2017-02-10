@@ -1,0 +1,10 @@
+
+
+cd "$1"
+files = `ls "$3"* -d`
+
+
+for subject in files
+
+    
+
