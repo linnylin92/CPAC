@@ -8,7 +8,7 @@
 #' @export
 library(changepoint)
 
-median_graph <- function(mat_list, heuristic = median_heuristic, ...){
+median_graph <- function(mat_list, heuristic = bin_seg_heuristic, ...){
   sum_mat <- Reduce('+', mat_list)
 
   val <- heuristic(sum_mat, ...)
