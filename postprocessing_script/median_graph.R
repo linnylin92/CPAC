@@ -6,8 +6,6 @@
 #'
 #' @return a graph encoded as sparse matrix
 #' @export
-library(changepoint)
-
 median_graph <- function(mat_list, heuristic = bin_seg_heuristic, ...){
   sum_mat <- Reduce('+', mat_list)
 
@@ -49,7 +47,7 @@ bin_seg_heuristic <- function(sum_mat) {
   #use wbs
   wbs_res <- wbs::wbs(sparsity_vec)
   wbs_changepoint_res <- wbs::changepoints(wbs_res)
-  wbs_changepoint <- c(1, sort(wbs_changepoint_res$cpt.th[[1]]), length(threshold_seq))
+  wbs_changepoint <- c(1, sort(wbs_changepoint_res$cpt.th[[1]]), length(threshold_vec))
   
   #find the largest gap
   gap_size <- diff(wbs_changepoint)
